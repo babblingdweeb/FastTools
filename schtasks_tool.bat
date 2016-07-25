@@ -1,6 +1,15 @@
 rem Found at: https://community.spiceworks.com/scripts/show/1474-export-and-import-all-scheduled-tasks-in-windows-server-2008-windows-7
+rem Instructions
+rem 1. Create and copy schtasks_tool.bat to root local drive on server you want to export scheduled tasks from.
+rem 2. Change runas info to your own.
+rem 3. From command prompt run c:\schtasks_tool.bat export
+rem a. This will create a c:\tasks folder and a c:\tnlist.txt
+rem 4. Copy c:\schtasks_tool.bat, c:\tasks, and c:\tnlist.txt to root volume on the server you want to add the tasks to.
+rem 5. Login to new server, go to command prompt, and run c:\schtasks_tool.bat import
+rem 6. All done!
 rem Edited on: 07.25.2016
 rem @echo off
+
 cls
 setlocal EnableDelayedExpansion
  
